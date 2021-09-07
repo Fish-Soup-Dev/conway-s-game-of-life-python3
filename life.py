@@ -1,4 +1,5 @@
 import pygame
+import random
 pygame.init()
 
 # Screen size
@@ -12,11 +13,10 @@ squares_freaze = []
 
 # Make Array all 0's
 while i != 25001:
-    squares.append("0")
-    squares_freaze.append("0")
+    ran = random.randrange(0, 2)
+    squares.append(str(ran))
+    squares_freaze.append(str(ran))
     i = i + 1
-
-print(25000, len(squares))
 
 def count_around(count):
     num_of_alive = 0
